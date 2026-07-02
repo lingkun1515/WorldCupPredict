@@ -1,0 +1,72 @@
+{
+  "East Rutherford": {
+    "altitude": 10,
+    "climate": "温带海洋",
+    "effect": "主场"
+  },
+  "Inglewood": {
+    "altitude": 38,
+    "climate": "地中海",
+    "effect": "中立"
+  },
+  "Houston": {
+    "altitude": 13,
+    "climate": "亚热带",
+    "effect": "中立"
+  },
+  "Foxborough": {
+    "altitude": 93,
+    "climate": "大陆性",
+    "effect": "中立"
+  },
+  "Guadalupe": {
+    "altitude": 538,
+    "climate": "半干旱高原",
+    "effect": "高原主场"
+  },
+  "Toronto": {
+    "altitude": 76,
+    "climate": "大陆性",
+    "effect": "中立"
+  },
+  "Santa Clara": {
+    "altitude": 22,
+    "climate": "地中海",
+    "effect": "主场"
+  },
+  "Seattle": {
+    "altitude": 53,
+    "climate": "海洋性",
+    "effect": "中立"
+  },
+  "Arlington": {
+    "altitude": 184,
+    "climate": "亚热带",
+    "effect": "中立"
+  },
+  "Mexico City": {
+    "altitude": 2250,
+    "climate": "高原",
+    "effect": "高原主场"
+  },
+  "Atlanta": {
+    "altitude": 320,
+    "climate": "亚热带",
+    "effect": "中立"
+  },
+  "Miami Gardens": {
+    "altitude": 2,
+    "climate": "热带",
+    "effect": "中立"
+  },
+  "Vancouver": {
+    "altitude": 2,
+    "climate": "海洋性",
+    "effect": "中立"
+  },
+  "Kansas City": {
+    "altitude": 277,
+    "climate": "大陆性",
+    "effect": "中立"
+  }
+}

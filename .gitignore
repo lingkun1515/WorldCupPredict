@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.bak
+_site/
+data/last_refresh.txt
+data/meta.json
+data/predictions.json
+data/results.json
+data/archive/
+data/matches.json.bak
+data/results.json.bak
+/tmp/
+.env
+.claude/

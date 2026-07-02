@@ -1,0 +1,180 @@
+[
+  {
+    "match_id": "r32-germany-paraguay",
+    "home_team": "Germany",
+    "away_team": "Paraguay",
+    "kickoff": "2026-06-29T16:00:00-04:00",
+    "venue": "Foxborough",
+    "stage": "32强淘汰赛",
+    "completed": true,
+    "home_goals": 1,
+    "away_goals": 1,
+    "home_penalties": 3,
+    "away_penalties": 4,
+    "kickoff_bj": "2026-06-30T04:00:00+08:00"
+  },
+  {
+    "match_id": "r32-france-sweden",
+    "home_team": "France",
+    "away_team": "Sweden",
+    "kickoff": "2026-06-30T16:00:00-04:00",
+    "venue": "East Rutherford",
+    "stage": "32强淘汰赛",
+    "kickoff_bj": "2026-07-01T04:00:00+08:00",
+    "completed": true,
+    "home_goals": 3,
+    "away_goals": 0
+  },
+  {
+    "match_id": "r32-south-africa-canada",
+    "home_team": "South Africa",
+    "away_team": "Canada",
+    "kickoff": "2026-06-28T16:00:00-04:00",
+    "venue": "Inglewood",
+    "stage": "32强淘汰赛",
+    "completed": true,
+    "home_goals": 0,
+    "away_goals": 1,
+    "kickoff_bj": "2026-06-29T04:00:00+08:00"
+  },
+  {
+    "match_id": "r32-netherlands-morocco",
+    "home_team": "Netherlands",
+    "away_team": "Morocco",
+    "kickoff": "2026-06-29T16:00:00-04:00",
+    "venue": "Guadalupe",
+    "stage": "32强淘汰赛",
+    "completed": true,
+    "home_goals": 1,
+    "away_goals": 1,
+    "home_penalties": 2,
+    "away_penalties": 3,
+    "kickoff_bj": "2026-06-30T04:00:00+08:00"
+  },
+  {
+    "match_id": "r32-portugal-croatia",
+    "home_team": "Portugal",
+    "away_team": "Croatia",
+    "kickoff": "2026-07-02T16:00:00-04:00",
+    "venue": "Toronto",
+    "stage": "32强淘汰赛",
+    "kickoff_bj": "2026-07-03T04:00:00+08:00"
+  },
+  {
+    "match_id": "r32-spain-austria",
+    "home_team": "Spain",
+    "away_team": "Austria",
+    "kickoff": "2026-07-02T16:00:00-04:00",
+    "venue": "Inglewood",
+    "stage": "32强淘汰赛",
+    "kickoff_bj": "2026-07-03T04:00:00+08:00"
+  },
+  {
+    "match_id": "r32-united-states-bosnia-and-herzegovina",
+    "home_team": "United States",
+    "away_team": "Bosnia and Herzegovina",
+    "kickoff": "2026-07-01T16:00:00-04:00",
+    "venue": "Santa Clara",
+    "stage": "32强淘汰赛",
+    "kickoff_bj": "2026-07-02T04:00:00+08:00",
+    "completed": true,
+    "home_goals": 2,
+    "away_goals": 0
+  },
+  {
+    "match_id": "r32-belgium-senegal",
+    "home_team": "Belgium",
+    "away_team": "Senegal",
+    "kickoff": "2026-07-01T16:00:00-04:00",
+    "venue": "Seattle",
+    "stage": "32强淘汰赛",
+    "kickoff_bj": "2026-07-02T04:00:00+08:00",
+    "completed": true,
+    "home_goals": 3,
+    "away_goals": 2
+  },
+  {
+    "match_id": "r32-brazil-japan",
+    "home_team": "Brazil",
+    "away_team": "Japan",
+    "kickoff": "2026-06-29T16:00:00-04:00",
+    "venue": "Houston",
+    "stage": "32强淘汰赛",
+    "completed": true,
+    "home_goals": 2,
+    "away_goals": 1,
+    "kickoff_bj": "2026-06-30T04:00:00+08:00"
+  },
+  {
+    "match_id": "r32-ivory-coast-norway",
+    "home_team": "Ivory Coast",
+    "away_team": "Norway",
+    "kickoff": "2026-06-30T16:00:00-04:00",
+    "venue": "Arlington",
+    "stage": "32强淘汰赛",
+    "kickoff_bj": "2026-07-01T04:00:00+08:00",
+    "completed": true,
+    "home_goals": 1,
+    "away_goals": 2
+  },
+  {
+    "match_id": "r32-mexico-ecuador",
+    "home_team": "Mexico",
+    "away_team": "Ecuador",
+    "kickoff": "2026-06-30T16:00:00-04:00",
+    "venue": "Mexico City",
+    "stage": "32强淘汰赛",
+    "kickoff_bj": "2026-07-01T04:00:00+08:00",
+    "completed": true,
+    "home_goals": 2,
+    "away_goals": 0
+  },
+  {
+    "match_id": "r32-england-dr-congo",
+    "home_team": "England",
+    "away_team": "DR Congo",
+    "kickoff": "2026-07-01T16:00:00-04:00",
+    "venue": "Atlanta",
+    "stage": "32强淘汰赛",
+    "kickoff_bj": "2026-07-02T04:00:00+08:00",
+    "completed": true,
+    "home_goals": 2,
+    "away_goals": 1
+  },
+  {
+    "match_id": "r32-argentina-cape-verde",
+    "home_team": "Argentina",
+    "away_team": "Cape Verde",
+    "kickoff": "2026-07-03T16:00:00-04:00",
+    "venue": "Miami Gardens",
+    "stage": "32强淘汰赛",
+    "kickoff_bj": "2026-07-04T04:00:00+08:00"
+  },
+  {
+    "match_id": "r32-australia-egypt",
+    "home_team": "Australia",
+    "away_team": "Egypt",
+    "kickoff": "2026-07-03T16:00:00-04:00",
+    "venue": "Arlington",
+    "stage": "32强淘汰赛",
+    "kickoff_bj": "2026-07-04T04:00:00+08:00"
+  },
+  {
+    "match_id": "r32-switzerland-algeria",
+    "home_team": "Switzerland",
+    "away_team": "Algeria",
+    "kickoff": "2026-07-02T16:00:00-04:00",
+    "venue": "Vancouver",
+    "stage": "32强淘汰赛",
+    "kickoff_bj": "2026-07-03T04:00:00+08:00"
+  },
+  {
+    "match_id": "r32-colombia-ghana",
+    "home_team": "Colombia",
+    "away_team": "Ghana",
+    "kickoff": "2026-07-03T16:00:00-04:00",
+    "venue": "Kansas City",
+    "stage": "32强淘汰赛",
+    "kickoff_bj": "2026-07-04T04:00:00+08:00"
+  }
+]

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="WorldCupPredict - AI驱动的2026世界杯比赛预测日报 {{ report.date }}。比分预测与置信度分析。">
+<meta property="og:title" content="AI 赛事预测日报 · {{ report.date }} | WorldCupPredict">
+<meta property="og:description" content="AI驱动的2026世界杯比赛预测日报。集成博彩赔率、评论员观点和统计模型。">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<title>AI 赛事预测日报 · {{ report.date }} | WorldCupPredict</title>
+<style>
+:root {
+  --bg-primary: #ffffff; --bg-card: #f8f9fa; --border: #dee2e6;
+  --text-primary: #1a1a2e; --text-secondary: #495057; --text-muted: #6c757d;
+  --accent-gold: #b8860b; --accent-green: #198754; --accent-red: #dc3545;
+  --accent-blue: #0d6efd; --accent-orange: #fd7e14;
+  --font-mono: 'Courier New', monospace; --font-sans: system-ui, sans-serif;
+  --radius: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); color: var(--text-primary); background: #fff; max-width: 1100px; margin: 0 auto; padding: 20px; font-size: 15px; line-height: 1.6; }
+.header { border-bottom: 2px solid var(--accent-gold); padding-bottom: 12px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 20px; font-weight: 700; }
+.logo span { color: var(--accent-gold); }
+.hero { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 24px; border-radius: var(--radius); margin-bottom: 20px; }
+.hero h1 { font-size: 22px; margin-bottom: 4px; }
+.hero h1 .gold { color: #f0c040; }
+.hero-meta { font-size: 13px; opacity: 0.85; }
+.accuracy-strip { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+.accuracy-card { flex: 1; min-width: 140px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; text-align: center; }
+.accuracy-value { font-size: 22px; font-weight: 700; color: var(--accent-green); }
+.accuracy-label { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.match-grid { display: grid; gap: 14px; }
+.match-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.match-card-header { display: flex; justify-content: space-between; padding: 10px 16px; background: #e9ecef; font-size: 13px; }
+.match-card-body { display: flex; align-items: center; padding: 20px 16px; gap: 20px; }
+.team { flex: 1; text-align: center; }
+.team-name { font-size: 17px; font-weight: 700; margin-top: 4px; }
+.match-vs { text-align: center; flex: 0 0 auto; }
+.predicted-score { font-size: 32px; font-weight: 800; color: var(--accent-blue); }
+.confidence-badge { display: inline-block; font-size: 12px; margin-top: 4px; padding: 2px 10px; border-radius: 20px; background: #e7f1ff; color: var(--accent-blue); }
+.match-card-detail { display: flex; gap: 12px; padding: 12px 16px; border-top: 1px solid var(--border); font-size: 13px; }
+.detail-panel { flex: 1; }
+.detail-panel-title { font-weight: 700; margin-bottom: 6px; color: var(--accent-gold); }
+table.odds-table { width: 100%; border-collapse: collapse; }
+table.odds-table td { padding: 4px 8px; border-bottom: 1px solid var(--border); }
+table.odds-table td.src { color: var(--text-secondary); font-size: 12px; }
+.reasoning-list { margin: 0; padding-left: 18px; }
+.reasoning-list li { margin-bottom: 3px; font-size: 13px; }
+.x-factor { background: #fff3cd; padding: 8px 12px; border-radius: var(--radius); font-size: 12px; margin-top: 8px; }
+.x-factor .label { font-weight: 700; color: var(--accent-orange); }
+.flag-emoji { font-size: 36px; display: block; text-align: center; margin-bottom: 4px; }
+.completed { border-left: 3px solid var(--accent-green); }
+.score-dist { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+.score-dist span { font-family: var(--font-mono); font-size: 11px; background: #e9ecef; padding: 1px 6px; border-radius: 3px; }
+.conf-basis { font-size: 11px; color: var(--text-muted); margin-top: 4px; font-style: italic; }
+.disclaimer { margin-top: 24px; padding: 14px; background: #fff3cd; border-radius: var(--radius); font-size: 12px; color: #664d03; }
+.footer { margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-muted); text-align: center; }
+@media print { body { max-width: none; padding: 10px; } .match-card { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<header class="header">
+<div class="logo">⚽ WorldCup<span>Predict</span></div>
+<div style="font-size:12px;color:var(--text-muted);"><a href="/" style="color:var(--accent-blue);">← 返回首页</a> · 导出日期: {{ report.date }} · 仅供研究参考</div>
+</header>
+<div class="hero">
+<h1>全球智库 <span class="gold">AI 赛事预测日报</span></h1>
+<div class="hero-meta">{{ report.date }} · {{ report.predictions|length }} 场AI预测 · {{ report.results|length }} 场已完赛</div>
+</div>
+
+{% if report.accuracy %}
+<div class="accuracy-strip">
+<div class="accuracy-card"><div class="accuracy-value">{{ report.predictions|length }}</div><div class="accuracy-label">今日预测</div></div>
+<div class="accuracy-card"><div class="accuracy-value" style="font-family:var(--font-mono)">{{ report.accuracy.outcome_rate }}</div><div class="accuracy-label">历史胜负准确率</div></div>
+<div class="accuracy-card"><div class="accuracy-value" style="font-family:var(--font-mono)">{{ report.accuracy.score_rate }}</div><div class="accuracy-label">精确比分命中率</div></div>
+<div class="accuracy-card"><div class="accuracy-value">{{ report.accuracy.total }}</div><div class="accuracy-label">累计追踪</div></div>
+</div>
+{% endif %}
+
+{% if report.results %}
+<h2 style="font-size:16px;color:var(--accent-green);margin-bottom:10px;">✅ 已完成比赛 ({{ report.results|length }} 场)</h2>
+<div class="match-grid" style="margin-bottom:24px;">
+{% for res in report.results %}
+<div class="match-card completed">
+<div class="match-card-header"><span>{{ res.stage }}</span><span>✅ 已完赛 · {{ res.date }}</span></div>
+<div class="match-card-body">
+<div class="team"><span class="flag-emoji">{{ res.home|e }}</span><div class="team-name">{{ res.home }}</div></div>
+<div class="match-vs"><div class="predicted-score" style="color:var(--text-primary);">{{ res.home_goals }} – {{ res.away_goals }}{% if res.penalties %}<div style="font-size:11px;">(点球 {{ res.penalties }})</div>{% endif %}</div></div>
+<div class="team"><span class="flag-emoji">{{ res.away|e }}</span><div class="team-name">{{ res.away }}</div></div>
+</div>
+<div style="padding:8px 16px;font-size:12px;">
+{% if res.scorers %}<div>⚽ {% for s in res.scorers %}{{ s }}{% if not loop.last %} · {% endif %}{% endfor %}</div>{% endif %}
+{% if res.summary %}<div style="color:var(--accent-gold);">💡 {{ res.summary }}</div>{% endif %}
+</div>
+</div>
+{% endfor %}
+</div>
+{% endif %}
+
+<h2 style="font-size:16px;color:var(--accent-blue);margin-bottom:10px;">🤖 AI 预测 ({{ report.predictions|length }} 场)</h2>
+<div class="match-grid">
+{% for p in report.predictions %}
+<div class="match-card">
+<div class="match-card-header"><span>{{ p.stage or "淘汰赛" }}</span><span>📅 {{ p.match_date or "待定" }}</span></div>
+<div class="match-card-body">
+<div class="team"><span class="flag-emoji">{{ p.home_team|e }}</span><div class="team-name">{{ p.home_team }}</div></div>
+<div class="match-vs">
+<div class="predicted-score">{{ p.predicted_home_goals }} – {{ p.predicted_away_goals }}</div>
+<span class="confidence-badge">{{ "%.0f"|format(p.confidence * 100) }}% 置信度</span>
+{% if p.score_distribution %}
+<div class="score-dist">
+{% for sd in p.score_distribution[:5] %}<span>{{ sd.home }}-{{ sd.away }} {{ "%.0f"|format(sd.prob) }}%</span>{% endfor %}
+</div>
+{% endif %}
+{% if p.confidence_basis %}<div class="conf-basis">{{ p.confidence_basis[:120] }}</div>{% endif %}
+</div>
+<div class="team"><span class="flag-emoji">{{ p.away_team|e }}</span><div class="team-name">{{ p.away_team }}</div></div>
+</div>
+<div class="match-card-detail">
+<div class="detail-panel">
+<div class="detail-panel-title">市场赔率</div>
+<table class="odds-table">
+<tr><td class="src">{{ p.home_team }} 胜</td><td>{{ "%.1f"|format(p.market_home_prob * 100) }}%</td></tr>
+<tr><td class="src">平局</td><td>{{ "%.1f"|format(p.market_draw_prob * 100) }}%</td></tr>
+<tr><td class="src">{{ p.away_team }} 胜</td><td>{{ "%.1f"|format(p.market_away_prob * 100) }}%</td></tr>
+</table>
+</div>
+<div class="detail-panel">
+<div class="detail-panel-title">AI 推理</div>
+<ul class="reasoning-list">
+{% for r in p.reasoning[:4] %}<li>{{ r }}</li>{% endfor %}
+</ul>
+{% if p.x_factor %}<div class="x-factor"><span class="label">关键变量：</span>{{ p.x_factor }}</div>{% endif %}
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+
+<div class="disclaimer">⚠ 本报告由 AI 综合分析全球博彩平台赔率、评论员观点及 Wikipedia 数据自动生成，仅供投资人参考，不构成投注建议。</div>
+<footer class="footer">WorldCupPredict v1.0 · AI 赛事预测引擎 · 导出时间: {{ report.date }}</footer>
+</body>
+</html>
