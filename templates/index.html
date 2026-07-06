@@ -204,6 +204,10 @@ style="margin-bottom:10px;width:100%;text-align:left;background:var(--bg-card);b
 {% if res.scorers %}<div style="margin-bottom:6px;">⚽ {% for s in res.scorers %}<span style="background:var(--bg-input);padding:2px 8px;border-radius:4px;margin-right:6px;">{{ s }}</span>{% endfor %}</div>{% endif %}
 <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:4px;"><span>🗓 {{ res.date }}</span>{% if res.venue %}<span>🏟 {{ res.venue }}</span>{% endif %}{% if res.attendance %}<span>👥 {{ res.attendance }}</span>{% endif %}{% if res.referee %}<span>👨‍⚖️ {{ res.referee }}</span>{% endif %}{% if res.source %}<span style="color:var(--text-muted);font-size:11px;">来源:{{ res.source }}</span>{% endif %}</div>
 {% if res.summary %}<div style="margin-top:6px;color:var(--accent-gold);">💡 {{ res.summary }}</div>{% endif %}
+{% if res.pred_home_goals is defined %}
+<div style="margin-top:6px;font-size:12px;color:var(--text-muted);">🔮 赛前预测: {{ res.home|cn }} {{ res.pred_home_goals }} – {{ res.pred_away_goals }} {{ res.away|cn }}
+{% if res.pred_home_goals|int == res.home_goals|int and res.pred_away_goals|int == res.away_goals|int %}<span style="color:var(--accent-gold);margin-left:6px;">🎯 比分命中!</span>{% elif (res.pred_home_goals|int > res.pred_away_goals|int and res.home_goals|int > res.away_goals|int) or (res.pred_home_goals|int < res.pred_away_goals|int and res.home_goals|int < res.away_goals|int) or (res.pred_home_goals|int == res.pred_away_goals|int and res.home_goals|int == res.away_goals|int) %}<span style="color:var(--accent-green);margin-left:6px;">✓ 胜负正确</span>{% else %}<span style="color:#f85149;margin-left:6px;">✗ 预测错误</span>{% endif %}
+</div>{% endif %}
 </div></div>
 {% endfor %}
 {% if report.pending_results %}

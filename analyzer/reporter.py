@@ -139,8 +139,20 @@ async def build_daily_report(matches: list[MatchData]) -> dict:
     # Sort results by date descending (most recent first)
     results.sort(key=lambda r: r.get("date", "0000"), reverse=True)
 
-    # Load historical for accuracy stats — keep ALL predictions (past + present)
+    # Attach pre-match predictions to each result for display
     history = load_predictions()
+    for res in results:
+        for pred in history:
+            if ((pred["home_team"] == res["home"] and pred["away_team"] == res["away"]) or
+                (pred["home_team"] == res["away"] and pred["away_team"] == res["home"])):
+                res["pred_home_goals"] = pred["predicted_home_goals"]
+                res["pred_away_goals"] = pred["predicted_away_goals"]
+                # If teams are swapped, correct direction
+                if pred["home_team"] == res["away"]:
+                    res["pred_home_goals"], res["pred_away_goals"] = res["pred_away_goals"], res["pred_home_goals"]
+                break
+
+    # Load historical for accuracy stats — keep ALL predictions (past + present)
     accuracy = _compute_accuracy(history)
 
     # Past-date matches without results go to pending_results section

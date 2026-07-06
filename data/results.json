@@ -1,0 +1,224 @@
+[
+  {
+    "home": "South Africa",
+    "away": "Canada",
+    "home_goals": 0,
+    "away_goals": 1,
+    "stage": "32强淘汰赛",
+    "date": "2026-06-28",
+    "venue": "SoFi Stadium, Inglewood",
+    "attendance": "69,237",
+    "referee": "João Pinheiro (葡萄牙)",
+    "scorers": [
+      "Eustáquio 90+2' (加拿大)"
+    ],
+    "summary": "加拿大补时绝杀南非",
+    "source": "ESPN"
+  },
+  {
+    "home": "Brazil",
+    "away": "Japan",
+    "home_goals": 2,
+    "away_goals": 1,
+    "stage": "32强淘汰赛",
+    "date": "2026-06-29",
+    "venue": "NRG Stadium, Houston",
+    "attendance": "68,777",
+    "referee": "Maurizio Mariani (意大利)",
+    "scorers": [
+      "Casemiro 56' (巴西)",
+      "Martinelli 90+5' (巴西)",
+      "Sano 29' (日本)"
+    ],
+    "summary": "巴西补时绝杀日本",
+    "source": "ESPN"
+  },
+  {
+    "home": "Germany",
+    "away": "Paraguay",
+    "home_goals": 1,
+    "away_goals": 1,
+    "penalties": "3-4",
+    "winner": "Paraguay",
+    "stage": "32强淘汰赛",
+    "date": "2026-06-29",
+    "venue": "Gillette Stadium, Foxborough",
+    "attendance": "63,945",
+    "referee": "Jalal Jayed (摩洛哥)",
+    "scorers": [
+      "Havertz 54' (德国)",
+      "Enciso 42' (巴拉圭)"
+    ],
+    "summary": "加时1-1，巴拉圭点球4-3淘汰德国",
+    "source": "ESPN"
+  },
+  {
+    "home": "Netherlands",
+    "away": "Morocco",
+    "home_goals": 1,
+    "away_goals": 1,
+    "penalties": "2-3",
+    "winner": "Morocco",
+    "stage": "32强淘汰赛",
+    "date": "2026-06-29",
+    "venue": "Estadio BBVA, Guadalupe",
+    "attendance": "51,243",
+    "referee": "Wilton Sampaio (巴西)",
+    "scorers": [
+      "Gakpo 72' (荷兰)",
+      "Diop 90+1' (摩洛哥)"
+    ],
+    "summary": "摩洛哥补时绝平后点球淘汰荷兰",
+    "source": "ESPN"
+  },
+  {
+    "home": "France",
+    "away": "Sweden",
+    "home_goals": 3,
+    "away_goals": 0,
+    "date": "2026-06-30",
+    "stage": "32强淘汰赛",
+    "venue": "East Rutherford",
+    "source": "ESPN"
+  },
+  {
+    "home": "Mexico",
+    "away": "Ecuador",
+    "home_goals": 2,
+    "away_goals": 0,
+    "date": "2026-06-30",
+    "stage": "32强淘汰赛",
+    "venue": "Mexico City",
+    "source": "ESPN"
+  },
+  {
+    "home": "England",
+    "away": "DR Congo",
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "Full Time",
+    "date": "2026-07-01",
+    "stage": "32强淘汰赛",
+    "source": "ESPN"
+  },
+  {
+    "home": "Belgium",
+    "away": "Senegal",
+    "home_goals": 3,
+    "away_goals": 2,
+    "status": "Final Score - After Extra Time",
+    "date": "2026-07-01",
+    "stage": "32强淘汰赛",
+    "source": "ESPN"
+  },
+  {
+    "home": "United States",
+    "away": "Bosnia and Herzegovina",
+    "home_goals": 2,
+    "away_goals": 0,
+    "status": "Full Time",
+    "date": "2026-07-02",
+    "stage": "32强淘汰赛",
+    "source": "ESPN"
+  },
+  {
+    "home": "Ivory Coast",
+    "away": "Norway",
+    "home_goals": 1,
+    "away_goals": 2,
+    "status": "Full Time",
+    "date": "2026-06-30",
+    "stage": "32强淘汰赛",
+    "source": "ESPN"
+  },
+  {
+    "home": "Spain",
+    "away": "Austria",
+    "home_goals": 3,
+    "away_goals": 0,
+    "status": "Full Time",
+    "date": "2026-07-02",
+    "stage": "32强淘汰赛",
+    "source": "ESPN"
+  },
+  {
+    "home": "Brazil",
+    "away": "Norway",
+    "home_goals": 1,
+    "away_goals": 2,
+    "status": "Full Time",
+    "date": "2026-07-05",
+    "stage": "32强淘汰赛",
+    "source": "ESPN"
+  },
+  {
+    "home": "Canada",
+    "away": "Morocco",
+    "home_goals": 0,
+    "away_goals": 3,
+    "status": "Full Time",
+    "date": "2026-07-04",
+    "stage": "32强淘汰赛",
+    "source": "ESPN"
+  },
+  {
+    "home": "Paraguay",
+    "away": "France",
+    "home_goals": 0,
+    "away_goals": 1,
+    "status": "Full Time",
+    "date": "2026-07-04",
+    "stage": "32强淘汰赛",
+    "source": "ESPN"
+  },
+  {
+    "home": "Australia",
+    "away": "Egypt",
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "Final Score - After Penalties",
+    "date": "2026-07-03",
+    "stage": "32强淘汰赛",
+    "source": "ESPN"
+  },
+  {
+    "home": "Argentina",
+    "away": "Cape Verde",
+    "home_goals": 3,
+    "away_goals": 2,
+    "status": "Final Score - After Extra Time",
+    "date": "2026-07-03",
+    "stage": "32强淘汰赛",
+    "source": "ESPN"
+  },
+  {
+    "home": "Colombia",
+    "away": "Ghana",
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "Full Time",
+    "date": "2026-07-04",
+    "stage": "32强淘汰赛",
+    "source": "ESPN"
+  },
+  {
+    "home": "Portugal",
+    "away": "Croatia",
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "Full Time",
+    "date": "2026-07-02",
+    "stage": "32强淘汰赛",
+    "source": "ESPN"
+  },
+  {
+    "home": "Switzerland",
+    "away": "Algeria",
+    "home_goals": 2,
+    "away_goals": 0,
+    "status": "Full Time",
+    "date": "2026-07-03",
+    "stage": "32强淘汰赛",
+    "source": "ESPN"
+  }
+]

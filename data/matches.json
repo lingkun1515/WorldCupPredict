@@ -58,7 +58,10 @@
     "kickoff": "2026-07-02T16:00:00-04:00",
     "venue": "Toronto",
     "stage": "32强淘汰赛",
-    "kickoff_bj": "2026-07-03T04:00:00+08:00"
+    "kickoff_bj": "2026-07-03T04:00:00+08:00",
+    "completed": true,
+    "home_goals": 2,
+    "away_goals": 1
   },
   {
     "match_id": "r32-spain-austria",
@@ -151,7 +154,10 @@
     "kickoff": "2026-07-03T16:00:00-04:00",
     "venue": "Miami Gardens",
     "stage": "32强淘汰赛",
-    "kickoff_bj": "2026-07-04T04:00:00+08:00"
+    "kickoff_bj": "2026-07-04T04:00:00+08:00",
+    "completed": true,
+    "home_goals": 3,
+    "away_goals": 2
   },
   {
     "match_id": "r32-australia-egypt",
@@ -160,7 +166,10 @@
     "kickoff": "2026-07-03T16:00:00-04:00",
     "venue": "Arlington",
     "stage": "32强淘汰赛",
-    "kickoff_bj": "2026-07-04T04:00:00+08:00"
+    "kickoff_bj": "2026-07-04T04:00:00+08:00",
+    "completed": true,
+    "home_goals": 1,
+    "away_goals": 1
   },
   {
     "match_id": "r32-switzerland-algeria",
@@ -169,7 +178,10 @@
     "kickoff": "2026-07-02T16:00:00-04:00",
     "venue": "Vancouver",
     "stage": "32强淘汰赛",
-    "kickoff_bj": "2026-07-03T04:00:00+08:00"
+    "kickoff_bj": "2026-07-03T04:00:00+08:00",
+    "completed": true,
+    "home_goals": 2,
+    "away_goals": 0
   },
   {
     "match_id": "r32-colombia-ghana",
@@ -178,6 +190,9 @@
     "kickoff": "2026-07-03T16:00:00-04:00",
     "venue": "Kansas City",
     "stage": "32强淘汰赛",
-    "kickoff_bj": "2026-07-04T04:00:00+08:00"
+    "kickoff_bj": "2026-07-04T04:00:00+08:00",
+    "completed": true,
+    "home_goals": 1,
+    "away_goals": 0
   }
 ]
