@@ -6,10 +6,11 @@ _site/
 data/last_refresh.txt
 data/meta.json
 data/predictions.json
-data/results.json
 data/archive/
 data/matches.json.bak
 data/results.json.bak
+data/accuracy_history.json
+data/optimization.json
 /tmp/
 .env
 .claude/
